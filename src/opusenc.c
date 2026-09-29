@@ -396,6 +396,11 @@ static OggOpusEnc *ope_encoder_create_callbacks_impl(const OpusEncCallbacks *cal
   if ( (enc = malloc(sizeof(*enc))) == NULL) goto fail;
   enc->buffer = NULL;
   enc->lpc_buffer = NULL;
+  /* The fail path and ope_encoder_destroy() clean up st, which is set up only later. */
+  enc->st.ms = NULL;
+#ifdef OPUS_HAVE_OPUS_PROJECTION_H
+  enc->st.pr = NULL;
+#endif
   if ( (enc->streams = stream_create(comments)) == NULL) goto fail;
   enc->last_stream = enc->streams;
   enc->oggp = NULL;
