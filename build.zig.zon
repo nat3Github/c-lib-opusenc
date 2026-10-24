@@ -5,8 +5,8 @@
     .minimum_zig_version = "0.17.0",
     .dependencies = .{
         .opus = .{
-            .url = "git+https://github.com/nat3Github/c-lib-opus#808bcd92c46580b39e97bed3e38d8e9bcea67bc3",
-            .hash = "opus-1.6.1-PWTqXUatMgCPY-AEkCjGnWio7pjsJLsbNF7Y2fQyUBJK",
+            .url = "git+https://github.com/nat3Github/c-lib-opus#3f748fc33c9e5786e6bf7877a6c82abcdc071d07",
+            .hash = "opus-1.6.1-PWTqXbaxMgA57LGUb00dd8fXdQ6yLEDfbJoUCSpZkzso",
         },
     },
     .paths = .{
